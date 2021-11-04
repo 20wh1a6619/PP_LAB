@@ -1,0 +1,14 @@
+def linear_search(n,a,ele):
+    for i in range(0,n):
+        if a[i] == ele:
+            return i
+    return -1
+
+n = int(input())
+a = [112,65,35,42,56]
+ele = int(input())
+pos = linear_search(n,a,ele)
+if pos == -1:
+    print("Element is not found")
+else:
+    print("Element is found at ",pos + 1)
