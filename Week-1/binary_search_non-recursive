@@ -1,0 +1,23 @@
+def binary_search(a,low,high,ele):
+    while low <= high:
+        mid = (high + low) // 2
+        if a[mid] == ele:
+            return mid
+        elif a[mid] > ele:
+            high = mid - 1
+        else:
+            low = mid + 1
+            
+
+    return -1
+
+
+a = [1,2,3,4,5]
+ele = 5
+pos = binary_search(a,0,5,ele)
+if pos == -1:
+    print("Element is not found ")
+else:
+    print("Element is found at",pos + 1)
+            
+
